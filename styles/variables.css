@@ -19,7 +19,7 @@
   --font-color-menu:#342E34;
   --font-size-items-menu:1rem;
   --font-size-items-menu-md:1rem;
-  --font-size-items-menu-xl:1.25rem;
+  --font-size-items-menu-xl:1.05rem;
   
   /* Buttons */
   --btn-menu-padding-y:12px;
@@ -32,4 +32,7 @@
     opacity 0.3s ease-in-out,
     transform 0.3s ease-in-out,
     visibility 0.3s ease-in-out;
+  
+  /* Hightlight */
+  --triangle-border:8px;
 }

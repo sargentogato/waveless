@@ -15,9 +15,9 @@
   gap: 5px;
   padding-left: var(--padding-menu-elements-x);
 
-img {
-      width: 120px;
-    }
+  img {
+    width: 120px;
+  }
 }
 
 .menu__items {
@@ -45,16 +45,18 @@ img {
   }
 }
 
-.menu--hidden{
+.menu--hidden {
   transform: translateY(var(--translate-y));
-  transition: var(--menu-animation)
+
+  transition: var(--menu-animation);
 }
 
 .menu--visible {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  background-color: var(--bg-default);
+}
 
 .menu__item-link {
   align-items: center;
@@ -108,20 +110,19 @@ img {
   .menu {
     padding: 15px 32px;
   }
-  
   .menu--hidden {
     transform: unset;
   }
-  
   .menu__items {
-    animation:unset;
+    animation: unset;
     flex-direction: row;
+    gap: 28px;
     opacity: 1;
-    position: unset;
-    visibility: visible;
-    transform: unset;
-    top: 0;
     padding: 0;
+    position: unset;
+    top: 0;
+    transform: unset;
+    visibility: visible;
     width: unset;
   }
   .menu__item-text {
@@ -139,6 +140,26 @@ img {
   .menu__tooggleButton {
     display: none;
   }
+
+  .menu__item-adventure:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 12%;
+    height: 2px;
+    transform: translateX(-8px);
+    background-color: var(--color-menu-brand);
+  }
+  
+  .menu__item-adventure:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 12%;
+    height: 2px;
+    transform: translateX(-8px);
+    background-color: var(--color-menu-brand);
+  }
 }
 
 @media screen and (min-width: 1128px) {
@@ -146,6 +167,7 @@ img {
     animation: unset;
     display: flex;
     flex-direction: row;
+    gap: 84px;
     position: sticky;
     width: unset;
   }

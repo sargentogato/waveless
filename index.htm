@@ -6,37 +6,38 @@
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/menuEffect.css" />
+    <link rel="stylesheet" href="styles/menuLinkHighlight.css" />
     <link rel="stylesheet" href="styles/styles.css" />
 
     <title>Knowmad</title>
   </head>
   <body>
     <header>
-      <nav id="menu" class="menu">
+      <nav id="menu" aria-label="Menú principal" class="menu">
         <div class="menu__logo">
           <img src="assets/logo-text.svg" alt="" />
         </div>
 
         <ul id="menuItems" class="menu__items menu--hidden">
-          <li class="menu__item">
-            <a href="#" class="menu__item-link">
+          <li class="menu__item ">
+            <a href="#" class="menu__item-link menu__item--adventure">
               <img src="assets/adventure.svg" alt="" />
               <p class="menu__item-text" data-text="Aventura">Aventura</p>
             </a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item menu__item--destination">
             <a href="#" class="menu__item-link">
               <img src="assets/destination.svg" alt="" />
               <p class="menu__item-text" data-text="Destinos">Destinos</p>
             </a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item  menu__item--acomodation">
             <a href="#" class="menu__item-link">
               <img src="assets/acomodation.svg" alt="" />
               <p class="menu__item-text" data-text="Alojamiento">Alojamiento</p>
             </a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item menu__item--about">
             <a href="#" class="menu__item-link">
               <p class="menu__item-text" data-text="Sobre Nosotros">
                 Sobre Nosotros
@@ -69,7 +70,12 @@
       </nav>
     </header>
     
-    
+    <main>
+      <slide>
+        Aquí Va el Slide
+      </slide>
+    </main>
+
     <script src="scripts/sriptManager.js" type="module"></script>
   </body>
 </html>
