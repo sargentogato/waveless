@@ -1,0 +1,35 @@
+:root{
+  /* Colors */
+  --color-menu-border-default:#FF8F50;
+  --bg-default:#FFFFFF;
+  --color-menu-brand:#622F60;
+  --color-text-btn:#FFFFFF;
+
+  
+  /* Logo */
+  --logo-size:100px;
+  
+  /* Menu */
+  --padding-menu-elements-x:16px;
+  --padding-menu-items:25px;
+  --padding-menu-item-x:12px;
+  
+  
+  /* Fonts */
+  --font-color-menu:#342E34;
+  --font-size-items-menu:1rem;
+  --font-size-items-menu-md:1rem;
+  --font-size-items-menu-xl:1.25rem;
+  
+  /* Buttons */
+  --btn-menu-padding-y:12px;
+  --btn-menu-padding-x:40px;
+  --btn-radius-menu:208px;
+  
+  /* Animations */
+  --translate-y:-20px;
+  --menu-animation:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+}
