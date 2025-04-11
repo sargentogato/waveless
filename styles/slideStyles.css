@@ -19,7 +19,6 @@
 }
 
 .slider__wrapper {
-  /* overflow: hidden; */
   display: flex;
   width: 100%;
   transition: transform 0.5s ease-in-out;
@@ -45,8 +44,20 @@
     height: 10px;
     width: 10px;
   }
-  
+
   .slider__dot--active {
     background-color: var(--orange);
+  }
+}
+
+/* Media query for screens smaller than 780px */
+@media (max-width: 680px) {
+  .slider__image {
+    min-height: 40vh; /* Adjust the height to 70% of the viewport height */
+    object-fit: cover; /* Ensure the image scales properly without distortion */
+  }
+
+  .slider__wrapper {
+    min-height: 40vh; /* Match the height of the wrapper to the images */
   }
 }
