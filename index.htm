@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="styles/menuLinkHighlight.css" />
     <link rel="stylesheet" href="styles/slideStyles.css" />
     <link rel="stylesheet" href="styles/styles.css" />
-
     <title>Knowmad</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav id="menu" aria-label="Menú principal" class="menu">
         <div class="menu__logo">
           <img src="assets/icons/logo-text.svg" alt="" />
@@ -76,12 +75,14 @@
         <!-- Controles -->
         <div class="slider__controls">
           <button
+            id="sliderPrev"
             class="slider__button slider__button--prev"
             aria-label="Imagen anterior"
           >
             <img src="./assets/icons/arrowLeft.svg" alt="" aria-hidden="true">
           </button>
           <button
+          id="sliderNext"
           class="slider__button slider__button--next"
           aria-label="Imagen siguiente"
           >
@@ -97,7 +98,6 @@
             class="slider__slide slide__one"
             aria-hidden="false"
             aria-current="true"
-            role="tabpanel"
           >
             <figure class="slider__figure">
               <picture class="slider__picture">
@@ -127,9 +127,8 @@
           <div
             id="slide2"
             class="slider__slide slide__two"
-            aria-hidden="false"
-            aria-current="true"
-            role="tabpanel"
+            aria-hidden="true"
+            aria-current="false"
           >
             <figure class="slider__figure">
               <picture class="slider__picture">
@@ -157,10 +156,10 @@
           </div>
           <!-- Slide 3 -->
           <div
-            class="slider__slide slider__three"
-            aria-hidden="false"
-            aria-current="true"
-            role="tabpanel"
+            id="slide3"
+            class="slider__slide slide__three"
+            aria-hidden="true"
+            aria-current="false "
           >
             <figure class="slider__figure">
               <picture class="slider__picture">
@@ -191,6 +190,7 @@
         <!-- Paginación -->
         <div class="slider__pagination" role="tablist">
           <button
+            id="dotOne"
             class="slider__dot slider__dot--active"
             role="tab"
             aria-selected="true"
@@ -198,6 +198,7 @@
           >
           </button>
           <button
+            id="dotTwo"
             class="slider__dot"
             role="tab"
             aria-selected="false"
@@ -205,6 +206,7 @@
           >
           </button>
           <button
+            id="dotThree"
             class="slider__dot"
             role="tab"
             aria-selected="false"
