@@ -7,33 +7,33 @@
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/menuEffect.css" />
     <link rel="stylesheet" href="styles/menuLinkHighlight.css" />
+    <link rel="stylesheet" href="styles/slideStyles.css" />
     <link rel="stylesheet" href="styles/styles.css" />
-
     <title>Knowmad</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav id="menu" aria-label="Menú principal" class="menu">
         <div class="menu__logo">
-          <img src="assets/logo-text.svg" alt="" />
+          <img src="assets/icons/logo-text.svg" alt="" />
         </div>
 
         <ul id="menuItems" class="menu__items menu--hidden">
-          <li class="menu__item ">
+          <li class="menu__item">
             <a href="#" class="menu__item-link menu__item--adventure">
-              <img src="assets/adventure.svg" alt="" />
+              <img src="assets/icons/adventure.svg" alt="" />
               <p class="menu__item-text" data-text="Aventura">Aventura</p>
             </a>
           </li>
           <li class="menu__item menu__item--destination">
             <a href="#" class="menu__item-link">
-              <img src="assets/destination.svg" alt="" />
+              <img src="assets/icons/destination.svg" alt="" />
               <p class="menu__item-text" data-text="Destinos">Destinos</p>
             </a>
           </li>
-          <li class="menu__item  menu__item--acomodation">
+          <li class="menu__item menu__item--acomodation">
             <a href="#" class="menu__item-link">
-              <img src="assets/acomodation.svg" alt="" />
+              <img src="assets/icons/acomodation.svg" alt="" />
               <p class="menu__item-text" data-text="Alojamiento">Alojamiento</p>
             </a>
           </li>
@@ -69,11 +69,152 @@
         </div>
       </nav>
     </header>
-    
+
     <main>
+<<<<<<< HEAD
       <div class="slide">
         
       </div>
+=======
+      <section class="slider" aria-label="Galería de destinos vacacionales" role="region">
+        <!-- Controles -->
+        <div class="slider__controls">
+          <button
+            id="sliderPrev"
+            class="slider__button slider__button--prev"
+            aria-label="Imagen anterior"
+          >
+            <img src="./assets/icons/arrowLeft.svg" alt="" aria-hidden="true">
+          </button>
+          <button
+          id="sliderNext"
+          class="slider__button slider__button--next"
+          aria-label="Imagen siguiente"
+          >
+          <img src="./assets/icons/arrowRight.svg" alt="" aria-hidden="true">
+          </button>
+        </div>
+
+        <!-- Slides -->
+        <div class="slider__wrapper">
+          <!-- Slide 1 -->
+          <div
+            id="slide1"
+            class="slider__slide slide__one"
+            aria-hidden="false"
+            aria-current="true"
+          >
+            <figure class="slider__figure">
+              <picture class="slider__picture">
+                <source
+                  media="(max-width: 680px)"
+                  srcset="./assets/images/asia-m.webp"
+                />
+                <source
+                  media="(min-width: 681px)"
+                  srcset="./assets/images/asia.webp"
+                />
+                <img
+                  class="slider__image"
+                  src="./assets/images/asia.webp"
+                  alt="Paisaje urbano nocturno de Asia con rascacielos iluminados"
+                  loading="lazy"
+                  decoding="async"
+                  width="1440"
+                  height="420"
+                />
+              </picture>
+            </figure>
+          </div>
+          <!-- Slide 2 -->
+          <div
+            id="slide2"
+            class="slider__slide slide__two"
+            aria-hidden="true"
+            aria-current="false"
+          >
+            <figure class="slider__figure">
+              <picture class="slider__picture">
+                <source
+                  media="(max-width: 680px)"
+                  srcset="./assets/images/australia-m.webp"
+                />
+                <source
+                  media="(min-width: 681px)"
+                  srcset="./assets/images/australia.webp"
+                />
+                <img
+                  class="slider__image"
+                  src="./assets/images/australia.webp"
+                  alt="Paisaje urbano nocturno de Asia con rascacielos iluminados"
+                  loading="lazy"
+                  decoding="async"
+                  width="1440"
+                  height="420"
+                />
+              </picture>
+            </figure>
+          </div>
+          <!-- Slide 3 -->
+          <div
+            id="slide3"
+            class="slider__slide slide__three"
+            aria-hidden="true"
+            aria-current="false "
+          >
+            <figure class="slider__figure">
+              <picture class="slider__picture">
+                <source
+                  media="(max-width: 680px)"
+                  srcset="./assets/images/mexico-m.webp"
+                />
+                <source
+                  media="(min-width: 681px)"
+                  srcset="./assets/images/mexico.webp"
+                />
+                <img
+                  class="slider__image"
+                  src="./assets/images/mexico.webp"
+                  alt="Paisaje urbano nocturno de Asia con rascacielos iluminados"
+                  loading="lazy"
+                  decoding="async"
+                  width="1920"
+                  height="1080"
+                />
+              </picture>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Paginación -->
+        <div class="slider__pagination" role="tablist">
+          <button
+            id="dotOne"
+            class="slider__dot slider__dot--active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="slide1"
+          >
+          </button>
+          <button
+            id="dotTwo"
+            class="slider__dot"
+            role="tab"
+            aria-selected="false"
+            aria-controls="slide2"
+          >
+          </button>
+          <button
+            id="dotThree"
+            class="slider__dot"
+            role="tab"
+            aria-selected="false"
+            aria-controls="slide3"
+          >
+          </button>
+        </div>
+      </section>
+>>>>>>> feature/slide
     </main>
 
     <script src="scripts/sriptManager.js" type="module"></script>

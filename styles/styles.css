@@ -2,11 +2,11 @@
 .menu {
   align-items: center;
   background-color: var(--bg-default);
-  border-bottom: 1px solid var(--color-menu-border-default);
+  border-bottom: 1px solid var(--orange);
   display: flex;
   justify-content: space-between;
-  min-height: 56px;
   position: relative;
+  max-height: 56px;
 }
 
 .menu__logo {
@@ -26,8 +26,7 @@
   flex-direction: column;
   gap: 20px;
   opacity: 0;
-  padding-left: var(--padding-menu-items);
-  padding-top: var(--padding-menu-items);
+  padding: var(--padding-menu-items);
   position: absolute;
   top: 101%;
   transform: translateY(var(--translate-y));
@@ -47,25 +46,23 @@
 
 .menu--hidden {
   transform: translateY(var(--translate-y));
-
   transition: var(--menu-animation);
+  z-index: 1;
+  background-color: var(--bg-default);
 }
 
 .menu--visible {
+  background-color: var(--bg-default);
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
-  background-color: var(--bg-default);
+  z-index: 2;
 }
 
 .menu__item-link {
   align-items: center;
   display: flex;
   gap: 6px;
-
-  &:hover .menu__item-text {
-    transition: font-weight 0.3s ease;
-  }
 }
 
 .menu__item-text {
@@ -82,6 +79,10 @@
     overflow: hidden;
     visibility: hidden;
   }
+
+  &:hover {
+    transition: font-weight 0.3s ease;
+  }
 }
 
 .menu__btn {
@@ -96,9 +97,14 @@
 
 .menu__tooggleButton {
   padding-right: var(--padding-menu-elements-x);
+  max-width: 70px;
 }
 
 @media screen and (min-width: 576px) {
+  .menu {
+    min-height: 80px;
+  }
+  
   .menu__logo {
     img {
       width: 150px;
@@ -106,13 +112,16 @@
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {  
   .menu {
     padding: 15px 32px;
+    max-height: 80px;
   }
+  
   .menu--hidden {
     transform: unset;
   }
+  
   .menu__items {
     animation: unset;
     flex-direction: row;
@@ -142,23 +151,22 @@
   }
 
   .menu__item-adventure:hover::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 12%;
-    height: 2px;
-    transform: translateX(-8px);
     background-color: var(--color-menu-brand);
+    bottom: 0;
+    content: "";
+    height: 2px;
+    position: absolute;
+    transform: translateX(-8px);
+    width: 12%;
   }
-  
   .menu__item-adventure:hover::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 12%;
-    height: 2px;
-    transform: translateX(-8px);
     background-color: var(--color-menu-brand);
+    bottom: 0;
+    content: "";
+    height: 2px;
+    position: absolute;
+    transform: translateX(-8px);
+    width: 12%;
   }
 }
 

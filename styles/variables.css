@@ -1,38 +1,34 @@
-:root{
+:root {
   /* Colors */
-  --color-menu-border-default:#FF8F50;
-  --bg-default:#FFFFFF;
-  --color-menu-brand:#622F60;
-  --color-text-btn:#FFFFFF;
+  --orange: #ff8f50;
+  --bg-default: #ffffff;
+  --color-menu-brand: #622f60;
+  --color-text-btn: #ffffff;
 
-  
   /* Logo */
-  --logo-size:100px;
-  
+  --logo-size: 100px;
+
   /* Menu */
-  --padding-menu-elements-x:16px;
-  --padding-menu-items:25px;
-  --padding-menu-item-x:12px;
-  
-  
+  --padding-menu-elements-x: 16px;
+  --padding-menu-items: 25px;
+  --padding-menu-item-x: 12px;
+
   /* Fonts */
-  --font-color-menu:#342E34;
-  --font-size-items-menu:1rem;
-  --font-size-items-menu-md:1rem;
-  --font-size-items-menu-xl:1.05rem;
-  
+  --font-color-menu: #342e34;
+  --font-size-items-menu: 1rem;
+  --font-size-items-menu-md: 1rem;
+  --font-size-items-menu-xl: 1.05rem;
+
   /* Buttons */
-  --btn-menu-padding-y:12px;
-  --btn-menu-padding-x:40px;
-  --btn-radius-menu:208px;
-  
+  --btn-menu-padding-y: 12px;
+  --btn-menu-padding-x: 40px;
+  --btn-radius-menu: 208px;
+
   /* Animations */
-  --translate-y:-20px;
-  --menu-animation:
-    opacity 0.3s ease-in-out,
-    transform 0.3s ease-in-out,
+  --translate-y: -20px;
+  --menu-animation: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
     visibility 0.3s ease-in-out;
-  
+
   /* Hightlight */
-  --triangle-border:8px;
+  --triangle-border: 8px;
 }
