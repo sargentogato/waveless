@@ -56,7 +56,7 @@
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
-  z-index: 3;
+  z-index: 2;
 }
 
 .menu__item-link {
@@ -148,25 +148,6 @@
 
   .menu__tooggleButton {
     display: none;
-  }
-
-  .menu__item-adventure:hover::after {
-    background-color: var(--pourple);
-    bottom: 0;
-    content: "";
-    height: 2px;
-    position: absolute;
-    transform: translateX(-8px);
-    width: 12%;
-  }
-  .menu__item-adventure:hover::after {
-    background-color: var(--pourple);
-    bottom: 0;
-    content: "";
-    height: 2px;
-    position: absolute;
-    transform: translateX(-8px);
-    width: 12%;
   }
 }
 
