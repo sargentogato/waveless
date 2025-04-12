@@ -56,7 +56,7 @@
     justify-content: center;
   }
   
-  .slider__button {
+  .slider__text-btn {
     background-color: var(--orange);
     border: none;
     border-radius: var(--btn-slides-radius);
@@ -64,6 +64,7 @@
     font-optical-sizing: auto;
     font-weight: 600;
     padding: var(--btn-slides-padding);
+    min-width: 16rem;
   }
 }
 
