@@ -1,35 +1,35 @@
 @media screen and (min-width: 992px) {
   .menu__item {
     position: relative;
+
     /* display: inline-flex;  */
   }
-  
   .menu__item--adventure:hover:before,
   .menu__item--destination:hover:before,
   .menu__item--acomodation:hover:before,
-  .menu__item--about:hover:before  {
-    content: "";
-    position: absolute;
-    bottom: -114%;
-    left: 50%;
-    transform: translateX(-50%);
+  .menu__item--about:hover:before {
+    border-bottom: var(--triangle-border) solid var(--orange);
     border-left: var(--triangle-border) solid transparent;
     border-right: var(--triangle-border) solid transparent;
-    border-bottom: var(--triangle-border) solid var(--color-menu-border-default);
+    bottom: -106%;
+    content: "";
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
   }
-  
   .menu__item--adventure:hover:after,
   .menu__item--destination:hover:after,
   .menu__item--acomodation:hover:after,
   .menu__item--about:hover:after {
+    background-color: var(--orange);
+    bottom: -107%;
     content: "";
-    position: absolute;
-    bottom: -115%;
-    left: 0;
-    /* width: 12%; */
-    width: 100%;
     height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    /* width: 12%; */
     /* transform: translateX(-8px); */
-    background-color: var(--color-menu-border-default);
   }
 }
