@@ -1,5 +1,5 @@
 /* 
- * Efecto del boton
+ * Button Effect
  */
 .hamRotate.active {
   transform: rotate(45deg);

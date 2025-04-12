@@ -2,7 +2,7 @@ const toggleButton = document.getElementById("toggleButton"); // SVG
 const menuItems = document.getElementById("menuItems")
 
 /*
- * Listening the clicks
+ * Open menu in mobile
  */
 toggleButton.addEventListener("click", menuVisibility);
 
