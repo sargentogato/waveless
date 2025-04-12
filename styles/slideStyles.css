@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  overflow:hidden
+  overflow:hidden;
 }
 
 .slider__controls {
@@ -53,11 +53,11 @@
 /* Media query for screens smaller than 780px */
 @media (max-width: 680px) {
   .slider__image {
-    min-height: 40vh; /* Adjust the height to 70% of the viewport height */
-    object-fit: cover; /* Ensure the image scales properly without distortion */
+    min-height: 47vh;
+    object-fit: cover;
   }
 
   .slider__wrapper {
-    min-height: 40vh; /* Match the height of the wrapper to the images */
+    min-height: 47vh;
   }
 }
