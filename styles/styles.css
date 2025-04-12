@@ -86,7 +86,7 @@
 }
 
 .menu__btn {
-  background-color: var(poruple);
+  background-color: var(--pourple);
   border: none;
   border-radius: var(--btn-radius-menu);
   color: var(--color-text-white);
