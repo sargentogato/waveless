@@ -5,8 +5,8 @@
   border-bottom: 1px solid var(--color-menu-border-default);
   display: flex;
   justify-content: space-between;
-  min-height: 56px;
   position: relative;
+  max-height: 56px;
 }
 
 .menu__logo {
@@ -96,9 +96,14 @@
 
 .menu__tooggleButton {
   padding-right: var(--padding-menu-elements-x);
+  max-width: 70px;
 }
 
 @media screen and (min-width: 576px) {
+  .menu {
+    min-height: 80px;
+  }
+  
   .menu__logo {
     img {
       width: 150px;
@@ -106,13 +111,16 @@
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {  
   .menu {
     padding: 15px 32px;
+    max-height: 80px;
   }
+  
   .menu--hidden {
     transform: unset;
   }
+  
   .menu__items {
     animation: unset;
     flex-direction: row;
