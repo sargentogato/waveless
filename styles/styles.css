@@ -1,7 +1,7 @@
 /**********************************Menu********************/
 .menu {
   align-items: center;
-  background-color: var(--bg-default);
+  background-color: var(--bg-white);
   border-bottom: 1px solid var(--orange);
   display: flex;
   justify-content: space-between;
@@ -48,11 +48,11 @@
   transform: translateY(var(--translate-y));
   transition: var(--menu-animation);
   z-index: 1;
-  background-color: var(--bg-default);
+  background-color: var(--bg-white);
 }
 
 .menu--visible {
-  background-color: var(--bg-default);
+  background-color: var(--bg-white);
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
@@ -86,10 +86,10 @@
 }
 
 .menu__btn {
-  background-color: var(--color-menu-brand);
+  background-color: var(--pourple);
   border: none;
   border-radius: var(--btn-radius-menu);
-  color: var(--color-text-btn);
+  color: var(--color-text-white);
   display: none;
   font-size: var(--font-size-btn-menu);
   padding: var(--btn-menu-padding-y) var(--btn-menu-padding-x);
@@ -151,7 +151,7 @@
   }
 
   .menu__item-adventure:hover::after {
-    background-color: var(--color-menu-brand);
+    background-color: var(--pourple);
     bottom: 0;
     content: "";
     height: 2px;
@@ -160,7 +160,7 @@
     width: 12%;
   }
   .menu__item-adventure:hover::after {
-    background-color: var(--color-menu-brand);
+    background-color: var(--pourple);
     bottom: 0;
     content: "";
     height: 2px;
