@@ -3,6 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/menuEffect.css" />
@@ -76,7 +88,20 @@
         aria-label="Galería de destinos vacacionales"
         role="region"
       >
-        <!-- Controles -->
+        <!----------------- Text --------------------->
+
+        <div class="slider__text">
+          <div id="sliderContent" class="slider__content">
+            <h1 class="slider__title">Ruta Por Australia</h1>
+            <h3 class="slider__subtitle">
+              Si te va la aventura, no te lo puedes perder
+            </h3>
+            <div class="slider__btn-box">
+              <button class="slider__button">Más Información</button>
+            </div>
+          </div>
+        </div>
+        <!-------------- Controles ----------------->
         <div class="slider__controls">
           <button
             id="sliderPrev"
@@ -98,8 +123,8 @@
           </button>
         </div>
 
-        <!-- Slides -->
-        <div class="slider__wrapper">
+        <!--------------- Slides ------------------->
+        <div id="sliderWrapper" class="slider__wrapper">
           <!---------------------- Slide 1 -------------------------->
           <div
             id="slide1"

@@ -1,9 +1,9 @@
 :root {
   /* Colors */
   --orange: #ff8f50;
-  --bg-default: #ffffff;
-  --color-menu-brand: #622f60;
-  --color-text-btn: #ffffff;
+  --bg-white: #ffffff;
+  --pourple: #622f60;
+  --color-text-white: #ffffff;
 
   /* Logo */
   --logo-size: 100px;
@@ -15,14 +15,26 @@
 
   /* Fonts */
   --font-color-menu: #342e34;
-  --font-size-items-menu: 1rem;
-  --font-size-items-menu-md: 1rem;
-  --font-size-items-menu-xl: 1.05rem;
+--font-size-items-menu: 1rem; /* 16px */
+  --font-size-items-menu-md: 1rem; /* 16px */
+  --font-size-items-menu-xl: 1.05rem; /* 16.8px */
+  --font-size-titles:2.5rem; /* 40px */
+  --font-size-subtitles:1.7rem; /* 27.2px */
+  --font-size-slide-btn:1.25rem; /* 20px */
+  
+  /* shadows */
+  --text-shadow:
+    1px 1px 1px rgb(0, 0, 0, 0.5),
+    2px 2px 2px rgb(0, 0, 0, 0.3),
+    1px 1px 1px rgb(255, 255, 255);
 
   /* Buttons */
   --btn-menu-padding-y: 12px;
   --btn-menu-padding-x: 40px;
   --btn-radius-menu: 208px;
+  --btn-slides-padding:15px;
+  --btn-slides-radius:50px;
+  
 
   /* Animations */
   --translate-y: -20px;
@@ -31,4 +43,5 @@
 
   /* Hightlight */
   --triangle-border: 8px;
+  
 }

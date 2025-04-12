@@ -71,40 +71,22 @@ class Slider {
   }
 
   updateSlider() {
-    console.log(`Current slide: ${this.current}`); // Añadir
-    //     this.slides.forEach((slide, index) => {
-    //       const isCurrent = this.current === index;
-    //       console.log(slide.classList);
-    //
-    //       if (isCurrent) {
-    //         slide.classList.add("slider__slide--displayed");
-    //         slide.classList.remove("slider__slide--displayed");
-    //       }
-    //
-    //       if (!isCurrent) {
-    //         slide.classList.remove("slider__slide--displayed");
-    //         slide.classList.add("slider__slide--hidden");
-    //       }
-    //     });
-    //
-    //     this.updateAria();
-
-    const wrapper = document.querySelector(".slider__wrapper");
+    const wrapper = document.getElementById("sliderWrapper");
     const offset = -this.current * 100;
 
     wrapper.style.transform = `translateX(${offset}%)`;
-    // const slide = document.querySelector(".slider__slide");
+    
+    
     this.updateAria();
 
     // slide.style.transform = `translateX(${offset}%)`;
-    this.updateAria();
 
     // Lazy loading para imágenes no cargadas
-    const currentSlide = this.slides[this.current];
-    const img = currentSlide.querySelector("picture");
-    if (!img.complete && img.dataset.srcset) {
-      img.srcset = img.dataset.srcset;
-    }
+    // const currentSlide = this.slides[this.current];
+    // const img = currentSlide.querySelector("picture");
+    // if (!img.complete && img.dataset.srcset) {
+    //   img.srcset = img.dataset.srcset;
+    // }
   }
 }
 
