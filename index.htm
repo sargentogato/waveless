@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="styles/toggleButtonEffect.css" />
     <link rel="stylesheet" href="styles/menuLinkHighlight.css" />
     <link rel="stylesheet" href="styles/slideStyles.css" />
+    <link rel="stylesheet" href="styles/filterButton.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <title>Knowmad</title>
   </head>
@@ -61,7 +62,11 @@
         <button class="menu__btn">Reserva</button>
 
         <div id="toggleButton" class="menu__tooggleButton">
-          <button class="hamburger hamburger--spin" onclick="this.classList.toggle('is-active')" type="button">
+          <button
+            class="hamburger hamburger--spin"
+            onclick="this.classList.toggle('is-active')"
+            type="button"
+          >
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
             </span>
@@ -71,7 +76,7 @@
     </header>
 
     <main>
-  <!-- Slide -->
+      <!-- Slide -->
       <section
         class="slider"
         aria-label="Galería de destinos vacacionales"
@@ -254,16 +259,53 @@
           ></button>
         </div>
       </section>
-      
-  <!-- Section Live your own adventures -->
+
+      <!-- Section Live your own adventures -->
       <section class="live">
         <div class="live__box">
           <h2 class="live__title">Vive tus propias aventuras</h2>
-          <h4 class="live__subtitle">Para los que les gusta explorar y conocer mundo sin complejos</h4>
+          <h4 class="live__subtitle">
+            Para los que les gusta explorar y conocer mundo sin complejos
+          </h4>
         </div>
-      </section>    
-  
-  
+      </section>
+
+      <!-- Filter button -->
+      <section class="filter">
+        <button id="btnFilters" class="filter__button">
+          <span
+            ><svg
+              width="20"
+              height="14"
+              viewBox="0 0 20 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.33301 1H18.6663"
+                stroke="#2F222F"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4.66602 7H15.3327"
+                stroke="#2F222F"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8 13H12"
+                stroke="#2F222F"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg> </span
+          >Ver Filtros
+        </button>
+      </section>
     </main>
 
     <script src="scripts/sriptManager.js" type="module"></script>
