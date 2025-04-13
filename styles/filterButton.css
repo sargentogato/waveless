@@ -15,3 +15,9 @@
   background-color: var(--softIvory);
   padding: 7px 12px;
 }
+
+@media screen and (min-width: 1128px) {
+  .filter {
+    display: none;
+  }
+}

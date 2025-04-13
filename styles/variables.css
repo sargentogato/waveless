@@ -8,8 +8,10 @@
   --color-EggplantGray: #2F222F;
   --softIvory:#FAF7F5;
   --softGrey:#EFEBED;
-
-
+  --greyDark:#342E34;
+  --softWhite:#FBF6F4;
+ 
+  
   /* Logo */
   --logo-size: 100px;
 
@@ -39,7 +41,10 @@
     1px 1px 1px rgb(0, 0, 0, 0.5),
     2px 2px 2px rgb(0, 0, 0, 0.3),
     1px 1px 1px rgb(255, 255, 255);
-
+    
+  --card-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+    
+    
   /* Buttons */
   --btn-menu-padding-y: 12px;
   --btn-menu-padding-x: 40px;
@@ -56,4 +61,11 @@
   /* Hightlight */
   --triangle-border: 8px;
   
+  
+  /* Side bar and cards */
+  --sidebar-width: 240px;
+  --gap: 24px;
+  --card-bg: #FAF7F5;
+  --card-radius: 24px;
+  --padding: 32px;
 }

@@ -107,7 +107,7 @@
   .live__box {
     width: 70%;
     text-align: center;
-        display: flex;
+    display: flex;
     flex-direction: column;
     gap: 16px;
   }
@@ -127,8 +127,214 @@
   .live__subtitle {
     font-family: var(--font-subtitle);
     font-size: var(--secondary-subtitle);
+    color: var(--color-DustyBlueGray);
   }
 }
+
+
+/* Sidebar filters and Cards */
+
+.main {
+  display: flex;
+  justify-content: center;
+    margin-top: 50px;
+  /* Quitar */
+  height: 100vh;
+  /* -------- */
+}
+
+.cards {
+  display: flex;
+  width: 1200px;
+  justify-content: center;
+}
+
+.cards__filters {
+  width: 264px;
+  display: none;
+}
+
+.filters__box {
+  background-color:var(--softIvory);
+  /* Quitar */
+  height: 100%;
+}
+
+.cards__group {
+  display: flex;
+
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+}
+
+.cards__group::before {
+  content: "Asia";
+  position: absolute;
+  top: -30px;
+  left: calc(10% - 40px);
+  font-size: 22px;
+  font-family: var(--font-title);
+  font-weight: 600;
+  line-height: 1%;
+}
+
+.cards__card {
+  background-color: var(--bg-white);
+  border-radius: var(--card-radius);
+  width: 340px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards__card-image-container {
+  position: relative;
+  line-height: 0;
+}
+
+.cards__card-image {
+  display: block;
+  width: 100%;
+  height: 180px;
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
+  object-fit: cover;
+}
+
+.cards__card-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--orange);
+  color: var(--greyDark);
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-subtitle)
+}
+
+.cards__card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  box-shadow: var(--card-shadow);
+  border-bottom-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
+}
+
+.cards__card-place {
+  padding: 15px;
+}
+
+.cards__card-location {
+  color: var(--pourple);
+  font-weight: 700;
+}
+
+.cards__card-location,
+.cards__card-duration {
+  font-family: var(--font-title);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.cards__card-duration {
+  font-weight: 500;
+  color: var(--greyDark);
+}
+
+.cards__card-title {
+  font-family: var(--font-subtitle);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+/* --- Sección Inferior (Footer) --- */
+.cards__card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  background-color: var(--softWhite);
+  border-bottom-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
+}
+
+.cards__card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cards__card-price {
+  line-height: 16px;
+  color: var(--greyDark);
+  order: 1;
+}
+
+.cards__card-price-label {
+  display: block;
+  font-size: 12px;
+  font-family: var(--font-subtitle);
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.cards__card-price-amount {
+  display: block;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.cards__card-details {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.cards__card-link {
+  font-weight: 600;
+  font-family: var(--font-subtitle);
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--pourple);
+  text-decoration: underline;
+}
+
+.cards__card-details-icon {
+  font-size: 0.7rem;
+}
+
+/* --- Sección de Acciones (Botón) --- */
+.cards__card-button--booking {
+  background-color: var(--bg-white);
+  border: 1px solid var(--pourple);
+  border-radius: 25px;
+  color: #6a1b9a;
+  padding: 10px 15px;
+  font-family: var(--font-subtitle);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cards__card-button--booking:hover {
+  background-color: var(--pourple);
+  color: #ffffff;
+}
+
+
+
 
 /* Media Queries */
 
@@ -166,6 +372,7 @@
     visibility: visible;
     width: unset;
   }
+
   .menu__item-text {
     font-size: var(--font-size-items-menu);
   }
@@ -181,6 +388,12 @@
   .menu__tooggleButton {
     display: none;
   }
+
+  .cards__card {
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 1128px) {
@@ -192,7 +405,15 @@
     position: sticky;
     width: unset;
   }
+
   .menu__item-text {
     font-size: var(--font-size-items-menu-md);
   }
+  
+    .cards__filters {
+      /* Quitar */
+      background-color: aqua;
+      width: 264px;
+      display: block;
+    }
 }
