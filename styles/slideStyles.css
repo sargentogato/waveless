@@ -54,6 +54,8 @@
     display: flex;
     align-items: end;
     justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   
   .slider__text-btn {
@@ -119,6 +121,12 @@
 }
 
 /* Media query for screens smaller than 780px */
+@media screen and (max-width:380px){
+  .slider__content {
+    width: 80%;
+  }
+}
+
 @media (max-width: 680px) {
   .slider__image {
     min-height: 47vh;
