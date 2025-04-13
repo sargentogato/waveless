@@ -26,7 +26,7 @@
   width: 60%;
 
   .slider__title {
-    font-family: "Syne", sans-serif;
+    font-family: var(--font-title);
     font-size: var(--font-size-titles);
     font-weight: bold;
   }
@@ -47,7 +47,7 @@
 
   .slider__subtitle,
   .slider__button {
-    font-family: "Nunito", sans-serif;
+    font-family: var(--font-subtitle);
   }
 
   .slider__btn-box {
@@ -62,7 +62,7 @@
     background-color: var(--orange);
     border: none;
     border-radius: var(--btn-slides-radius);
-    font-size: var(--font-size-slide-btn);
+    font-size: var(--font-size-btn-xl);
     font-optical-sizing: auto;
     font-weight: 600;
     padding: var(--btn-slides-padding);

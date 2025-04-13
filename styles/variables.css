@@ -4,6 +4,8 @@
   --bg-white: #ffffff;
   --pourple: #622f60;
   --color-text-white: #ffffff;
+  --color-DustyBlueGray:#6B7D8D;
+  --color-EggplantGray: #2F222F;
 
   /* Logo */
   --logo-size: 100px;
@@ -15,12 +17,19 @@
 
   /* Fonts */
   --font-color-menu: #342e34;
---font-size-items-menu: 1rem; /* 16px */
-  --font-size-items-menu-md: 1rem; /* 16px */
-  --font-size-items-menu-xl: 1.05rem; /* 16.8px */
+  --font-size-items-menu: 1rem; /* 16px */
+  --font-size-items-menu-md: 1.05rem; /* 16.8px */
   --font-size-titles:2.5rem; /* 40px */
   --font-size-subtitles:1.7rem; /* 27.2px */
   --font-size-slide-btn:1.25rem; /* 20px */
+  --font-size-btn-xl:1.25rem; /* 20px */
+  --secondary-title:1.875rem; /* 30px */
+  --secondary-subtitle:1.25rem; /* 20px */
+  
+  
+  /* Font Family */
+  --font-title:"Syne", sans-serif;
+  --font-subtitle:"Nunito", sans-serif;
   
   /* shadows */
   --text-shadow:
