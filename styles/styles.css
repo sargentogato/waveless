@@ -56,7 +56,7 @@
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
-  z-index: 2;
+  z-index: 3;
 }
 
 .menu__item-link {
@@ -98,6 +98,7 @@
 .menu__tooggleButton {
   padding-right: var(--padding-menu-elements-x);
   max-width: 70px;
+  height: 70px;
 }
 
 @media screen and (min-width: 576px) {
