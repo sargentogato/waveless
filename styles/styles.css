@@ -97,8 +97,6 @@
 
 .menu__tooggleButton {
   padding-right: var(--padding-menu-elements-x);
-  max-width: 70px;
-  height: 70px;
 }
 
 .live {
