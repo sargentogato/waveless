@@ -1,0 +1,28 @@
+.filter {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter__button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-subtitle);
+  font-weight: 600;
+  border-radius: 25px;
+  border: 1px solid var(--softGrey);
+  background-color: var(--softIvory);
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.filter__button:hover {
+  background-color: var(--lightWarmGray);
+}
+
+@media screen and (min-width: 1128px) {
+  .filter {
+    display: none;
+  }
+}

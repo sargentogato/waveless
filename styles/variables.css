@@ -4,7 +4,15 @@
   --bg-white: #ffffff;
   --pourple: #622f60;
   --color-text-white: #ffffff;
-
+  --color-DustyBlueGray:#6B7D8D;
+  --color-EggplantGray: #2F222F;
+  --softIvory:#FAF7F5;
+  --softGrey:#EFEBED;
+  --greyDark:#342E34;
+  --softWhite:#FBF6F3;
+  --lightWarmGray:#E0D9E0;
+  --greyForSeparationLines:#E2D6DD;
+  
   /* Logo */
   --logo-size: 100px;
 
@@ -15,19 +23,29 @@
 
   /* Fonts */
   --font-color-menu: #342e34;
---font-size-items-menu: 1rem; /* 16px */
-  --font-size-items-menu-md: 1rem; /* 16px */
-  --font-size-items-menu-xl: 1.05rem; /* 16.8px */
+  --font-size-items-menu: 1rem; /* 16px */
+  --font-size-items-menu-md: 1.05rem; /* 16.8px */
   --font-size-titles:2.5rem; /* 40px */
   --font-size-subtitles:1.7rem; /* 27.2px */
   --font-size-slide-btn:1.25rem; /* 20px */
+  --font-size-btn-xl:1.25rem; /* 20px */
+  --secondary-title:1.875rem; /* 30px */
+  --secondary-subtitle:1.25rem; /* 20px */
+  
+  
+  /* Font Family */
+  --font-title:"Syne", sans-serif;
+  --font-subtitle:"Nunito", sans-serif;
   
   /* shadows */
   --text-shadow:
     1px 1px 1px rgb(0, 0, 0, 0.5),
     2px 2px 2px rgb(0, 0, 0, 0.3),
     1px 1px 1px rgb(255, 255, 255);
-
+    
+  --card-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+    
+    
   /* Buttons */
   --btn-menu-padding-y: 12px;
   --btn-menu-padding-x: 40px;
@@ -44,4 +62,14 @@
   /* Hightlight */
   --triangle-border: 8px;
   
+  
+  /* Side bar and cards */
+  --sidebar-width: 240px;
+  --gap: 24px;
+  --card-bg: #FAF7F5;
+  --card-radius: 24px;
+  --padding: 32px;
+  
+  /* Filters */
+  --padding-filters-box:20px;
 }
