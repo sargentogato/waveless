@@ -25,9 +25,6 @@ class Slider {
     this.dots.forEach((dot, index) => {
       dot.addEventListener("click", () => this.goTo(index));
     });
-
-    // Autoplay (opcional)
-    // this.autoplay = setInterval(() => this.next(), 5000);
   }
 
   next() {
@@ -76,17 +73,7 @@ class Slider {
 
     wrapper.style.transform = `translateX(${offset}%)`;
     
-    
     this.updateAria();
-
-    // slide.style.transform = `translateX(${offset}%)`;
-
-    // Lazy loading para imágenes no cargadas
-    // const currentSlide = this.slides[this.current];
-    // const img = currentSlide.querySelector("picture");
-    // if (!img.complete && img.dataset.srcset) {
-    //   img.srcset = img.dataset.srcset;
-    // }
   }
 }
 
