@@ -54,7 +54,7 @@
     display: flex;
     align-items: end;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 0;
     margin-bottom: 30px;
   }
   
@@ -121,6 +121,12 @@
 }
 
 /* Media query for screens smaller than 780px */
+@media screen and (min-width:376px) {
+  .slider__btn-box {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (max-width:380px){
   .slider__content {
     width: 80%;
