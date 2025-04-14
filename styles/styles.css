@@ -184,6 +184,8 @@
   visibility: visible;
   z-index: 3;
   background-color: var(--softIvory);
+    pointer-events: auto;
+      cursor: pointer;
 }
 
 .menu--hidden {
@@ -207,6 +209,11 @@
 }
 
 .filters__title-close{
+  display: none;
+}
+
+.filters--visible > .filters__title-box .filters__title-close {
+  display: block;
     position: absolute;
       right: 0;
       top: 0;
