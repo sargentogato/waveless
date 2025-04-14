@@ -1,30 +1,25 @@
-const toggleBtn = document.getElementById("jsToggle")
+/* Arrow to dispaly filter options */
+const toggleButtons = document.querySelectorAll(".jsToggle");
 
-toggleBtn.addEventListener('click', () => {
- const content = document.getElementById("jsContent");
- const arrow = document.getElementById("jsArrow");
- const expanded = toggleBtn.getAttribute("aria-expanded") === 'true';
- console.log("🚀 ~ toggleBtn.addEventListener ~ expanded:", expanded);
- const icon = document.getElementById("jsIcon");
- const filterTitle = document.getElementById("jsTitleFilter");
-  console.log("🚀 ~ toggleBtn.addEventListener ~ filterTitle:", filterTitle);
-  
-  
- toggleBtn.setAttribute("aria-expanded", !expanded);
- content.hidden = expanded;
- arrow.classList.toggle("filters__arrow--rotated");
- 
- if (icon.classList.contains("filter__icon-svg--notSelected")) {
-   icon.classList.remove("filter__icon-svg--notSelected");
-   icon.classList.add("filters__icon-svg--selected");
- } else {
-   icon.classList.remove(".filters__icon-svg--selected");
-   icon.classList.add("filter__icon-svg--notSelected");
- }
- 
- filterTitle.classList.toggle("filters__label--selected");
- 
-})
+toggleButtons.forEach((toggleBtn) => {
+  toggleBtn.addEventListener("click", () => {
+    const section = toggleBtn.closest(".filters__section");
+    const content = section.querySelector(".jsContent");
+    const arrow = toggleBtn.querySelector(".jsArrow");
+    const icon = toggleBtn.querySelector(".jsIcon");
+    const filterTitle = toggleBtn.querySelector(".jsTitleFilter");
+
+    const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
+    toggleBtn.setAttribute("aria-expanded", !expanded);
+    content.hidden = expanded;
+    arrow.classList.toggle("filters__arrow--rotated");
+
+    icon.classList.toggle("filter__icon-svg--notSelected");
+    icon.classList.toggle("filters__icon-svg--selected");
+    filterTitle.classList.toggle("filters__label--selected");
+  });
+});
+
 
 /* Button to open filters */
 const btnFilter = document.getElementById("filters");
@@ -34,6 +29,7 @@ btnFilters.addEventListener("click", () => {
   filterPannel.classList.toggle("filters--visible");
   filterPannel.classList.toggle("filters");
 })
+
 
 
 /* Recize Windows */

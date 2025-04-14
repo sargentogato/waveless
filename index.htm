@@ -170,29 +170,24 @@
         <div class="filters__title-box">
           <h2 class="filters__title">Filtrar mi búsqueda</h2>
         </div>
-
+        <!-- Destino -->
         <div class="filters__section">
-          <button id="jsToggle" class="filters__toggle" aria-expanded="false">
+          <button class="jsToggle filters__toggle" aria-expanded="false">
             <span class="filters__icon">
-              <svg id="jsIcon" class="filter__icon-svg--notSelected" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_8827_1575)">
-                  <path d="M15.7256 6.75C16.7611 6.75 17.6006 5.91053 17.6006 4.875C17.6006 3.83947 16.7611 3 15.7256 3C14.6901 3 13.8506 3.83947 13.8506 4.875C13.8506 5.91053 14.6901 6.75 15.7256 6.75Z" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M1.10059 18.7501L7.95371 7.11948C8.01988 7.0067 8.11439 6.91318 8.22786 6.84819C8.34134 6.78321 8.46982 6.74902 8.60059 6.74902C8.73135 6.74902 8.85984 6.78321 8.97331 6.84819C9.08678 6.91318 9.18129 7.0067 9.24746 7.11948L16.1006 18.7501H1.10059Z" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M5.07129 12H12.1307" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M14.0957 15.3476L17.1951 10.1173C17.2615 10.0054 17.3559 9.91265 17.469 9.84826C17.582 9.78386 17.7099 9.75 17.8401 9.75C17.9702 9.75 18.0981 9.78386 18.2112 9.84826C18.3243 9.91265 18.4187 10.0054 18.4851 10.1173L23.601 18.7498H16.101" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_8827_1575">
-                    <rect width="24" height="24" fill="white" transform="translate(0.350586)" />
-                  </clipPath>
-                </defs>
+              <svg class="jsIcon filter__icon-svg--notSelected" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.8232 20.3493C16.7808 20.3493 20.7998 16.3527 20.7998 11.4227C20.7998 6.49267 16.7808 2.49609 11.8232 2.49609C6.86561 2.49609 2.84668 6.49267 2.84668 11.4227C2.84668 16.3527 6.86561 20.3493 11.8232 20.3493Z" stroke-width="1.2672" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M3.53906 14.8585H5.95582C6.59679 14.8585 7.2115 14.6053 7.66473 14.1546C8.11796 13.7039 8.37258 13.0926 8.37258 12.4552V10.3952C8.37258 9.7578 8.6272 9.1465 9.08043 8.6958C9.53366 8.24509 10.1484 7.99188 10.7893 7.99188C11.4303 7.99188 12.045 7.73868 12.4982 7.28797C12.9515 6.83726 13.2061 6.22597 13.2061 5.58857V2.59473" stroke-width="1.2672" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M20.7967 11.2827C20.1053 10.9259 19.3384 10.7377 18.5595 10.7334H15.6179C14.977 10.7334 14.3623 10.9866 13.909 11.4373C13.4558 11.888 13.2012 12.4993 13.2012 13.1367C13.2012 13.7741 13.4558 14.3854 13.909 14.8361C14.3623 15.2868 14.977 15.54 15.6179 15.54C16.0758 15.54 16.5148 15.7209 16.8386 16.0428C17.1623 16.3648 17.3442 16.8014 17.3442 17.2567V18.4515" stroke-width="1.2672"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11.265 19.7887C11.4164 19.449 11.4398 19.0374 11.2646 18.6727C11.0895 18.3081 10.8958 17.787 10.4967 17.611C10.0975 17.435 9.65451 17.4011 9.26516 17.5169C8.87581 17.6326 8.57199 17.8885 8.42052 18.2282C8.31233 18.4708 8.09532 18.6535 7.81721 18.7362C7.5391 18.8189 7.22269 18.7947 6.93757 18.669L6.18936 18.339" stroke-width="1.2672" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
-            <span id="jsTitleFilter" class="filters__label">Aventura</span>
-            <span id="jsArrow" class="filters__arrow">›</span>
+            <span class="jsTitleFilter filters__label">Destinos</span>
+            <span class="jsArrow filters__arrow">›</span>
           </button>
 
-          <ul id="jsContent" class="filters__list" hidden>
+          <ul class="jsContent filters__list" hidden>
             <li class="filters__item">
               <label class="filters__checkbox">
                 <input type="checkbox" />
@@ -225,7 +220,159 @@
             </li>
           </ul>
         </div>
+        <!-- Aventura -->
+        <div class="filters__section">
+          <button class="jsToggle filters__toggle" aria-expanded="false">
+            <span class="filters__icon">
+              <svg class="jsIcon filter__icon-svg--notSelected" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_8827_1575)">
+                  <path d="M15.7256 6.75C16.7611 6.75 17.6006 5.91053 17.6006 4.875C17.6006 3.83947 16.7611 3 15.7256 3C14.6901 3 13.8506 3.83947 13.8506 4.875C13.8506 5.91053 14.6901 6.75 15.7256 6.75Z" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M1.10059 18.7501L7.95371 7.11948C8.01988 7.0067 8.11439 6.91318 8.22786 6.84819C8.34134 6.78321 8.46982 6.74902 8.60059 6.74902C8.73135 6.74902 8.85984 6.78321 8.97331 6.84819C9.08678 6.91318 9.18129 7.0067 9.24746 7.11948L16.1006 18.7501H1.10059Z" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5.07129 12H12.1307" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M14.0957 15.3476L17.1951 10.1173C17.2615 10.0054 17.3559 9.91265 17.469 9.84826C17.582 9.78386 17.7099 9.75 17.8401 9.75C17.9702 9.75 18.0981 9.78386 18.2112 9.84826C18.3243 9.91265 18.4187 10.0054 18.4851 10.1173L23.601 18.7498H16.101" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_8827_1575">
+                    <rect width="24" height="24" fill="white" transform="translate(0.350586)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </span>
+            <span class="jsTitleFilter filters__label">Aventura</span>
+            <span class="jsArrow filters__arrow">›</span>
+          </button>
 
+          <ul class="jsContent filters__list" hidden>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Quads</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" checked />
+                <span class="filters__text">Parapente</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Rafting</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" checked />
+                <span class="filters__text">Explora</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Buceo</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <!-- Alojamiento -->
+        <div class="filters__section">
+          <button class="jsToggle filters__toggle" aria-expanded="false">
+            <span class="filters__icon">
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="jsIcon filter__icon-svg--notSelected">
+                <circle cx="12.8779" cy="8.30373" r="1.056" stroke-width="1.056" />
+                <path d="M4.6194 11.3137C4.58177 10.8457 4.76866 10.3876 5.12295 10.0796L11.9082 4.1793C12.4645 3.69558 13.2922 3.69558 13.8484 4.1793L20.6337 10.0796C20.988 10.3876 21.1749 10.8457 21.1373 11.3137L20.563 18.4546C20.5012 19.2227 19.8599 19.8145 19.0894 19.8145H6.66732C5.89677 19.8145 5.25544 19.2227 5.19367 18.4546L4.6194 11.3137Z" stroke-width="1.2672" />
+                <line x1="7.80157" y1="19.8934" x2="7.80157" y2="21.9257" stroke-width="1.2672" stroke-linecap="round" />
+                <line x1="17.6063" y1="19.8934" x2="17.6063" y2="21.9257" stroke-width="1.2672" stroke-linecap="round" />
+                <path d="M15.3461 19.2622V14.7751C15.3461 13.6087 14.4005 12.6631 13.2341 12.6631H12.5554C11.3889 12.6631 10.4434 13.6087 10.4434 14.7751V19.2622" stroke-width="1.2672" />
+              </svg>
+              
+            </span>
+            <span class="jsTitleFilter filters__label">Alojamiento</span>
+            <span class="jsArrow filters__arrow">›</span>
+          </button>
+
+          <ul class="jsContent filters__list" hidden>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Quads</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" checked />
+                <span class="filters__text">Parapente</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Rafting</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" checked />
+                <span class="filters__text">Explora</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Buceo</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <!-- Precios -->
+        <div class="filters__section">
+          <button class="jsToggle filters__toggle" aria-expanded="false">
+            <span class="filters__icon">
+              <svg class="jsIcon filter__icon-svg--notSelected" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.969375 9.96937C0.828988 9.82883 0.750092 9.63833 0.75 9.43969V0.75H9.43969C9.63833 0.750092 9.82883 0.828988 9.96937 0.969375L19.2806 10.2806C19.4212 10.4213 19.5001 10.612 19.5001 10.8108C19.5001 11.0096 19.4212 11.2003 19.2806 11.3409L11.3437 19.2806C11.2031 19.4212 11.0124 19.5001 10.8136 19.5001C10.6148 19.5001 10.4241 19.4212 10.2834 19.2806L0.969375 9.96937Z"
+                  stroke-width="1.2672" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              
+              
+            </span>
+            <span class="jsTitleFilter filters__label">Precio</span>
+            <span class="jsArrow filters__arrow">›</span>
+          </button>
+
+          <ul class="jsContent filters__list" hidden>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Quads</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" checked />
+                <span class="filters__text">Parapente</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Rafting</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" checked />
+                <span class="filters__text">Explora</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Buceo</span>
+              </label>
+            </li>
+          </ul>
+        </div>
       </aside>
 
       <div class="cards__box">
@@ -331,6 +478,10 @@
   </main>
   </main>
 
+  <footer>
+    <div class="footer__logo">Aqui va el logo</div>
+    <div class="footer__rights">Aqui los derchos     </div>
+  </footer>
 
   <script src="scripts/sriptManager.js" type="module"></script>
 </body>
