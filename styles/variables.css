@@ -10,6 +10,8 @@
   --softGrey:#EFEBED;
   --greyDark:#342E34;
   --softWhite:#FBF6F4;
+  --lightWarmGray:#E0D9E0;
+  
  
   
   /* Logo */
@@ -68,4 +70,7 @@
   --card-bg: #FAF7F5;
   --card-radius: 24px;
   --padding: 32px;
+  
+  /* Filters */
+  --padding-filters-box:20px;
 }

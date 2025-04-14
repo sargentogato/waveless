@@ -142,50 +142,93 @@
     </div>
   </section>
 
-  <!-- Section Live your own adventures -->
-  <section class="live">
-    <div class="live__box">
-      <h2 class="live__title">Vive tus propias aventuras</h2>
-      <h4 class="live__subtitle">
-        Para los que les gusta explorar y conocer mundo sin complejos
-      </h4>
-    </div>
-  </section>
-
-  <!-- Filter button -->
-  <section class="filter">
-    <button id="btnFilters" class="filter__button">
-      <span><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1.33301 1H18.6663" stroke="#2F222F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M4.66602 7H15.3327" stroke="#2F222F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M8 13H12" stroke="#2F222F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-        </svg> </span>Ver Filtros
-    </button>
-  </section>
-
-  <!-- Cards and filters -->
   <main class="main">
-    <section class="cards">
-      <aside class="cards__filters">
-        <div class="filters__box">
-          <h3 class="filters__title">Filtrar mi búsqueda</h3>
-          <div class="filters__options">
-            <details>
-              <summary>Ver más información sobre el envío</summary>
-              <ul>
-                <li>Coste estándar: 3,99 €</li>
-                <li>Coste exprés: 9,99 €</li>
-              </ul>
-            </details>
-          </div>
+    <!-- Section Live your own adventures -->
+    <section class="live">
+      <div class="live__box">
+        <h2 class="live__title">Vive tus propias aventuras</h2>
+        <h4 class="live__subtitle">
+          Para los que les gusta explorar y conocer mundo sin complejos
+        </h4>
+      </div>
+    </section>
+
+    <!-- Filter button -->
+    <section id="filterBtn" class="filter">
+      <button id="btnFilters" class="filter__button">
+        <span><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.33301 1H18.6663" stroke="#2F222F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4.66602 7H15.3327" stroke="#2F222F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8 13H12" stroke="#2F222F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          </svg> </span>Ver Filtros
+      </button>
+    </section>
+
+    <!-- Cards and filters -->
+    <section class="filters__main-box">
+      <aside id="filtersPannel" class="filters">
+        <div class="filters__title-box">
+          <h2 class="filters__title">Filtrar mi búsqueda</h2>
         </div>
+
+        <div class="filters__section">
+          <button id="jsToggle" class="filters__toggle" aria-expanded="false">
+            <span class="filters__icon">
+              <svg id="jsIcon" class="filter__icon-svg--notSelected" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_8827_1575)">
+                  <path d="M15.7256 6.75C16.7611 6.75 17.6006 5.91053 17.6006 4.875C17.6006 3.83947 16.7611 3 15.7256 3C14.6901 3 13.8506 3.83947 13.8506 4.875C13.8506 5.91053 14.6901 6.75 15.7256 6.75Z" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M1.10059 18.7501L7.95371 7.11948C8.01988 7.0067 8.11439 6.91318 8.22786 6.84819C8.34134 6.78321 8.46982 6.74902 8.60059 6.74902C8.73135 6.74902 8.85984 6.78321 8.97331 6.84819C9.08678 6.91318 9.18129 7.0067 9.24746 7.11948L16.1006 18.7501H1.10059Z" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5.07129 12H12.1307" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M14.0957 15.3476L17.1951 10.1173C17.2615 10.0054 17.3559 9.91265 17.469 9.84826C17.582 9.78386 17.7099 9.75 17.8401 9.75C17.9702 9.75 18.0981 9.78386 18.2112 9.84826C18.3243 9.91265 18.4187 10.0054 18.4851 10.1173L23.601 18.7498H16.101" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_8827_1575">
+                    <rect width="24" height="24" fill="white" transform="translate(0.350586)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </span>
+            <span id="jsTitleFilter" class="filters__label">Aventura</span>
+            <span id="jsArrow" class="filters__arrow">›</span>
+          </button>
+
+          <ul id="jsContent" class="filters__list" hidden>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Quads</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" checked />
+                <span class="filters__text">Parapente</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Rafting</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" checked />
+                <span class="filters__text">Explora</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Buceo</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
       </aside>
 
       <div class="cards__box">
-        <!-- <div class="test">
-          <h2 class="cards__title">Asia</h2>
-        </div> -->
-        
         <!-- Cards -->
         <div class="cards__group">
           <!-- 1 -->
@@ -285,6 +328,7 @@
         </div>
       </div>
     </section>
+  </main>
   </main>
 
 
