@@ -203,6 +203,21 @@
 .filters__title-box {
   border-bottom: 1px solid var(--lightWarmGray);
   padding: 16px 24px 16px 24px;
+  position: relative;
+}
+
+.filters__title-close{
+    position: absolute;
+      right: 0;
+      top: 0;
+      background: var(--orange);
+      padding: 0 6px;
+      border-radius: 50%;
+      color: white;
+      z-index: 4;
+      border: none;
+      pointer-events: auto;
+      cursor: pointer;
 }
 
 .filters__title {
