@@ -27,14 +27,11 @@ const filterPannel = document.getElementById("filtersPannel");
 const closeFilterBox = document.getElementById("closeFilterBox");
 
 btnFilters.addEventListener("click", () => {
-  console.log("BOTON DE FILTROS");
-  
   filterPannel.classList.toggle("filters--visible");
   filterPannel.classList.toggle("filters");
 })
 
 closeFilterBox.addEventListener("click", () => {
-  console.log("Dentro");
   
   filterPannel.classList.toggle("filters--visible");
   filterPannel.classList.toggle("filters");
