@@ -14,4 +14,15 @@
   border: 1px solid var(--softGrey);
   background-color: var(--softIvory);
   padding: 7px 12px;
+  cursor: pointer;
+}
+
+.filter__button:hover {
+  background-color: var(--lightWarmGray);
+}
+
+@media screen and (min-width: 1128px) {
+  .filter {
+    display: none;
+  }
 }

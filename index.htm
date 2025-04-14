@@ -1,313 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Syne:wght@400..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/variables.css" />
-    <link rel="stylesheet" href="styles/toggleButtonEffect.css" />
-    <link rel="stylesheet" href="styles/menuLinkHighlight.css" />
-    <link rel="stylesheet" href="styles/slideStyles.css" />
-    <link rel="stylesheet" href="styles/filterButton.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <title>Knowmad</title>
-  </head>
-  <body>
-    <header class="header">
-      <nav id="menu" aria-label="Menú principal" class="menu">
-        <div class="menu__logo">
-          <img src="assets/icons/logo-text.svg" alt="" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/toggleButtonEffect.css" />
+  <link rel="stylesheet" href="styles/menuLinkHighlight.css" />
+  <link rel="stylesheet" href="styles/slideStyles.css" />
+  <link rel="stylesheet" href="styles/filterButton.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <title>Knowmad</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav id="menu" aria-label="Menú principal" class="menu">
+      <div class="menu__logo">
+        <img src="assets/icons/logo-text.svg" alt="" />
+      </div>
+
+      <ul id="menuItems" class="menu__items menu--hidden">
+        <li class="menu__item">
+          <a href="#" class="menu__item-link menu__item--adventure">
+            <img src="assets/icons/adventure.svg" alt="" />
+            <p class="menu__item-text" data-text="Aventura">Aventura</p>
+          </a>
+        </li>
+        <li class="menu__item menu__item--destination">
+          <a href="#" class="menu__item-link">
+            <img src="assets/icons/destination.svg" alt="" />
+            <p class="menu__item-text" data-text="Destinos">Destinos</p>
+          </a>
+        </li>
+        <li class="menu__item menu__item--acomodation">
+          <a href="#" class="menu__item-link">
+            <img src="assets/icons/acomodation.svg" alt="" />
+            <p class="menu__item-text" data-text="Alojamiento">Alojamiento</p>
+          </a>
+        </li>
+        <li class="menu__item menu__item--about">
+          <a href="#" class="menu__item-link">
+            <p class="menu__item-text" data-text="Sobre Nosotros">
+              Sobre Nosotros
+            </p>
+          </a>
+        </li>
+      </ul>
+
+      <button class="menu__btn">Reserva</button>
+
+      <div id="toggleButton" class="menu__tooggleButton">
+        <button class="hamburger hamburger--spin" onclick="this.classList.toggle('is-active')" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Slide -->
+  <section class="slider" aria-label="Galería de destinos vacacionales" role="region">
+    <!----------------- Text --------------------->
+
+    <div class="slider__text">
+      <div id="sliderContent" class="slider__content">
+        <h1 class="slider__title">Ruta Por Australia</h1>
+        <h3 class="slider__subtitle">
+          Si te va la aventura, no te lo puedes perder
+        </h3>
+        <div class="slider__btn-box">
+          <button class="slider__text-btn">Más Información</button>
+        </div>
+      </div>
+    </div>
+    <!-------------- Controles ----------------->
+    <div class="slider__controls">
+      <button id="sliderPrev" class="slider__button slider__button--prev" aria-label="Imagen anterior">
+        <img src="./assets/icons/arrowLeft.svg" alt="" aria-hidden="true" />
+      </button>
+      <button id="sliderNext" class="slider__button slider__button--next" aria-label="Imagen siguiente">
+        <img src="./assets/icons/arrowRight.svg" alt="" aria-hidden="true" />
+      </button>
+    </div>
+
+    <!--------------- Slides ------------------->
+    <div id="sliderWrapper" class="slider__wrapper">
+      <!---------------------- Slide 1 -------------------------->
+      <div id="slide1" class="slider__slide slide__one" aria-hidden="false" aria-current="true">
+        <figure class="slider__figure">
+          <picture class="slider__picture">
+            <source media="(max-width: 680px)" srcset="./assets/images/australia-m.webp" />
+            <source media="(max-width: 992px)" srcset="./assets/images/australia-max-992.webp" />
+            <source media="(max-width: 1023px)" srcset="./assets/images/australia-max-1200.webp" />
+            <source media="(min-width: 1024px)" srcset="./assets/images/australia.webp" />
+            <img class="slider__image" src="./assets/images/australia.webp" alt="Paisaje urbano nocturno de Asia con rascacielos iluminados" loading="lazy" decoding="async" width="1440" height="420" />
+          </picture>
+        </figure>
+      </div>
+
+      <!---------------------- Slide 2 -------------------------->
+      <div id="slide2" class="slider__slide slide__two" aria-hidden="true" aria-current="false">
+        <figure class="slider__figure">
+          <picture class="slider__picture">
+            <source media="(max-width: 680px)" srcset="./assets/images/asia-m.webp" />
+            <source media="(max-width: 992px)" srcset="./assets/images/asia-max-992.webp" />
+            <source media="(max-width: 1023px)" srcset="./assets/images/asia-max-1200.webp" />
+            <source media="(min-width: 1024px)" srcset="./assets/images/asia.webp" />
+            <img class="slider__image" src="./assets/images/asia.webp" alt="Paisaje urbano nocturno de Asia con rascacielos iluminados" loading="lazy" decoding="async" width="1440" height="420" />
+          </picture>
+        </figure>
+      </div>
+
+      <!---------------------- Slide 3 -------------------------->
+      <div id="slide3" class="slider__slide slide__three" aria-hidden="true" aria-current="false ">
+        <figure class="slider__figure">
+          <picture class="slider__picture">
+            <source media="(max-width: 680px)" srcset="./assets/images/mexico-m.webp" />
+            <source media="(max-width: 992px)" srcset="./assets/images/mexico-max-992.webp" />
+            <source media="(max-width: 1023px)" srcset="./assets/images/mexico-max-1200.webp" />
+            <source media="(min-width: 1024px)" srcset="./assets/images/mexico.webp" />
+            <img class="slider__image" src="./assets/images/mexico.webp" alt="Paisaje urbano nocturno de Asia con rascacielos iluminados" loading="lazy" decoding="async" width="1920" height="1080" />
+          </picture>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Paginación -->
+    <div class="slider__pagination" role="tablist">
+      <button id="dotOne" class="slider__dot slider__dot--active" role="tab" aria-selected="true" aria-controls="slide1"></button>
+      <button id="dotTwo" class="slider__dot" role="tab" aria-selected="false" aria-controls="slide2"></button>
+      <button id="dotThree" class="slider__dot" role="tab" aria-selected="false" aria-controls="slide3"></button>
+    </div>
+  </section>
+
+  <main class="main">
+    <!-- Section Live your own adventures -->
+    <section class="live">
+      <div class="live__box">
+        <h2 class="live__title">Vive tus propias aventuras</h2>
+        <h4 class="live__subtitle">
+          Para los que les gusta explorar y conocer mundo sin complejos
+        </h4>
+      </div>
+    </section>
+
+    <!-- Filter button -->
+    <section id="filterBtn" class="filter">
+      <button id="btnFilters" class="filter__button">
+        <span><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.33301 1H18.6663" stroke="#2F222F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4.66602 7H15.3327" stroke="#2F222F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8 13H12" stroke="#2F222F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          </svg> </span>Ver Filtros
+      </button>
+    </section>
+
+    <!-- Cards and filters -->
+    <section class="filters__main-box">
+      <aside id="filtersPannel" class="filters">
+        <div class="filters__title-box">
+          <h2 class="filters__title">Filtrar mi búsqueda</h2>
         </div>
 
-        <ul id="menuItems" class="menu__items menu--hidden">
-          <li class="menu__item">
-            <a href="#" class="menu__item-link menu__item--adventure">
-              <img src="assets/icons/adventure.svg" alt="" />
-              <p class="menu__item-text" data-text="Aventura">Aventura</p>
-            </a>
-          </li>
-          <li class="menu__item menu__item--destination">
-            <a href="#" class="menu__item-link">
-              <img src="assets/icons/destination.svg" alt="" />
-              <p class="menu__item-text" data-text="Destinos">Destinos</p>
-            </a>
-          </li>
-          <li class="menu__item menu__item--acomodation">
-            <a href="#" class="menu__item-link">
-              <img src="assets/icons/acomodation.svg" alt="" />
-              <p class="menu__item-text" data-text="Alojamiento">Alojamiento</p>
-            </a>
-          </li>
-          <li class="menu__item menu__item--about">
-            <a href="#" class="menu__item-link">
-              <p class="menu__item-text" data-text="Sobre Nosotros">
-                Sobre Nosotros
-              </p>
-            </a>
-          </li>
-        </ul>
-
-        <button class="menu__btn">Reserva</button>
-
-        <div id="toggleButton" class="menu__tooggleButton">
-          <button
-            class="hamburger hamburger--spin"
-            onclick="this.classList.toggle('is-active')"
-            type="button"
-          >
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
+        <div class="filters__section">
+          <button id="jsToggle" class="filters__toggle" aria-expanded="false">
+            <span class="filters__icon">
+              <svg id="jsIcon" class="filter__icon-svg--notSelected" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_8827_1575)">
+                  <path d="M15.7256 6.75C16.7611 6.75 17.6006 5.91053 17.6006 4.875C17.6006 3.83947 16.7611 3 15.7256 3C14.6901 3 13.8506 3.83947 13.8506 4.875C13.8506 5.91053 14.6901 6.75 15.7256 6.75Z" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M1.10059 18.7501L7.95371 7.11948C8.01988 7.0067 8.11439 6.91318 8.22786 6.84819C8.34134 6.78321 8.46982 6.74902 8.60059 6.74902C8.73135 6.74902 8.85984 6.78321 8.97331 6.84819C9.08678 6.91318 9.18129 7.0067 9.24746 7.11948L16.1006 18.7501H1.10059Z" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5.07129 12H12.1307" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M14.0957 15.3476L17.1951 10.1173C17.2615 10.0054 17.3559 9.91265 17.469 9.84826C17.582 9.78386 17.7099 9.75 17.8401 9.75C17.9702 9.75 18.0981 9.78386 18.2112 9.84826C18.3243 9.91265 18.4187 10.0054 18.4851 10.1173L23.601 18.7498H16.101" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_8827_1575">
+                    <rect width="24" height="24" fill="white" transform="translate(0.350586)" />
+                  </clipPath>
+                </defs>
+              </svg>
             </span>
+            <span id="jsTitleFilter" class="filters__label">Aventura</span>
+            <span id="jsArrow" class="filters__arrow">›</span>
           </button>
+
+          <ul id="jsContent" class="filters__list" hidden>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Quads</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" checked />
+                <span class="filters__text">Parapente</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Rafting</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" checked />
+                <span class="filters__text">Explora</span>
+              </label>
+            </li>
+            <li class="filters__item">
+              <label class="filters__checkbox">
+                <input type="checkbox" />
+                <span class="filters__text">Buceo</span>
+              </label>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
 
-    <main>
-      <!-- Slide -->
-      <section
-        class="slider"
-        aria-label="Galería de destinos vacacionales"
-        role="region"
-      >
-        <!----------------- Text --------------------->
+      </aside>
 
-        <div class="slider__text">
-          <div id="sliderContent" class="slider__content">
-            <h1 class="slider__title">Ruta Por Australia</h1>
-            <h3 class="slider__subtitle">
-              Si te va la aventura, no te lo puedes perder
-            </h3>
-            <div class="slider__btn-box">
-              <button class="slider__text-btn">Más Información</button>
+      <div class="cards__box">
+        <!-- Cards -->
+        <div class="cards__group">
+          <!-- 1 -->
+          <div class="cards__card">
+            <!-- Image -->
+            <div class="cards__card-image-container">
+              <img src="./assets/cards/asia.jpeg" alt="Paisaje desértico con camello" class="cards__card-image">
+              <span class="cards__card-tag">Quads</span>
+            </div>
+            <!-- Content -->
+            <div class="cards__card-content">
+              <div class="cards__card-place">
+                <p class="cards__card-location">Marruecos, África <span class="cards__card-duration">9 días</span></p>
+                <h3 class="cards__card-title">Descubre Bangkok con Iberojet</h3>
+              </div>
+              <!-- card Footer -->
+              <div class="cards__card-footer">
+                <div class="cards__card-info">
+                  <div class="cards__card-price">
+                    <span class="cards__card-price-label">Desde</span>
+                    <span class="cards__card-price-amount">248,00 €</span>
+                  </div>
+                  <a href="#" class="cards__card-details">
+                    <p class="cards__card-link">Ver desglose</p>
+                    <span class="cards__card-details-icon">&#9662;</span>
+                  </a>
+                </div>
+                <div class="cards__card-actions">
+                  <button class="cards__card-button cards__card-button--booking">Reservar</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <!-------------- Controles ----------------->
-        <div class="slider__controls">
-          <button
-            id="sliderPrev"
-            class="slider__button slider__button--prev"
-            aria-label="Imagen anterior"
-          >
-            <img src="./assets/icons/arrowLeft.svg" alt="" aria-hidden="true" />
-          </button>
-          <button
-            id="sliderNext"
-            class="slider__button slider__button--next"
-            aria-label="Imagen siguiente"
-          >
-            <img
-              src="./assets/icons/arrowRight.svg"
-              alt=""
-              aria-hidden="true"
-            />
-          </button>
-        </div>
-
-        <!--------------- Slides ------------------->
-        <div id="sliderWrapper" class="slider__wrapper">
-          <!---------------------- Slide 1 -------------------------->
-          <div
-            id="slide1"
-            class="slider__slide slide__one"
-            aria-hidden="false"
-            aria-current="true"
-          >
-            <figure class="slider__figure">
-              <picture class="slider__picture">
-                <source
-                  media="(max-width: 680px)"
-                  srcset="./assets/images/australia-m.webp"
-                />
-                <source
-                  media="(max-width: 992px)"
-                  srcset="./assets/images/australia-max-992.webp"
-                />
-                <source
-                  media="(max-width: 1023px)"
-                  srcset="./assets/images/australia-max-1200.webp"
-                />
-                <source
-                  media="(min-width: 1024px)"
-                  srcset="./assets/images/australia.webp"
-                />
-                <img
-                  class="slider__image"
-                  src="./assets/images/australia.webp"
-                  alt="Paisaje urbano nocturno de Asia con rascacielos iluminados"
-                  loading="lazy"
-                  decoding="async"
-                  width="1440"
-                  height="420"
-                />
-              </picture>
-            </figure>
+          <!-- 2 -->
+          <div class="cards__card">
+            <!-- Image -->
+            <div class="cards__card-image-container">
+              <img src="./assets/cards/asia.jpeg" alt="Paisaje desértico con camello" class="cards__card-image">
+              <span class="cards__card-tag">Quads</span>
+            </div>
+            <!-- Content -->
+            <div class="cards__card-content">
+              <div class="cards__card-place">
+                <p class="cards__card-location">Marruecos, África <span class="cards__card-duration">9 días</span></p>
+                <h3 class="cards__card-title">Descubre Bangkok con Iberojet</h3>
+              </div>
+              <!-- card Footer -->
+              <div class="cards__card-footer">
+                <div class="cards__card-info">
+                  <div class="cards__card-price">
+                    <span class="cards__card-price-label">Desde</span>
+                    <span class="cards__card-price-amount">248,00 €</span>
+                  </div>
+                  <a href="#" class="cards__card-details">
+                    <p class="cards__card-link">Ver desglose</p>
+                    <span class="cards__card-details-icon">&#9662;</span>
+                  </a>
+                </div>
+                <div class="cards__card-actions">
+                  <button class="cards__card-button cards__card-button--booking">Reservar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="cards__card">
+            <!-- Image -->
+            <div class="cards__card-image-container">
+              <img src="./assets/cards/asia.jpeg" alt="Paisaje desértico con camello" class="cards__card-image">
+              <span class="cards__card-tag">Quads</span>
+            </div>
+            <!-- Content -->
+            <div class="cards__card-content">
+              <div class="cards__card-place">
+                <p class="cards__card-location">Marruecos, África <span class="cards__card-duration">9 días</span></p>
+                <h3 class="cards__card-title">Descubre Bangkok con Iberojet</h3>
+              </div>
+              <!-- card Footer -->
+              <div class="cards__card-footer">
+                <div class="cards__card-info">
+                  <div class="cards__card-price">
+                    <span class="cards__card-price-label">Desde</span>
+                    <span class="cards__card-price-amount">248,00 €</span>
+                  </div>
+                  <a href="#" class="cards__card-details">
+                    <p class="cards__card-link">Ver desglose</p>
+                    <span class="cards__card-details-icon">&#9662;</span>
+                  </a>
+                </div>
+                <div class="cards__card-actions">
+                  <button class="cards__card-button cards__card-button--booking">Reservar</button>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!---------------------- Slide 2 -------------------------->
-          <div
-            id="slide2"
-            class="slider__slide slide__two"
-            aria-hidden="true"
-            aria-current="false"
-          >
-            <figure class="slider__figure">
-              <picture class="slider__picture">
-                <source
-                  media="(max-width: 680px)"
-                  srcset="./assets/images/asia-m.webp"
-                />
-                <source
-                  media="(max-width: 992px)"
-                  srcset="./assets/images/asia-max-992.webp"
-                />
-                <source
-                  media="(max-width: 1023px)"
-                  srcset="./assets/images/asia-max-1200.webp"
-                />
-                <source
-                  media="(min-width: 1024px)"
-                  srcset="./assets/images/asia.webp"
-                />
-                <img
-                  class="slider__image"
-                  src="./assets/images/asia.webp"
-                  alt="Paisaje urbano nocturno de Asia con rascacielos iluminados"
-                  loading="lazy"
-                  decoding="async"
-                  width="1440"
-                  height="420"
-                />
-              </picture>
-            </figure>
-          </div>
-
-          <!---------------------- Slide 3 -------------------------->
-          <div
-            id="slide3"
-            class="slider__slide slide__three"
-            aria-hidden="true"
-            aria-current="false "
-          >
-            <figure class="slider__figure">
-              <picture class="slider__picture">
-                <source
-                  media="(max-width: 680px)"
-                  srcset="./assets/images/mexico-m.webp"
-                />
-                <source
-                  media="(max-width: 992px)"
-                  srcset="./assets/images/mexico-max-992.webp"
-                />
-                <source
-                  media="(max-width: 1023px)"
-                  srcset="./assets/images/mexico-max-1200.webp"
-                />
-                <source
-                  media="(min-width: 1024px)"
-                  srcset="./assets/images/mexico.webp"
-                />
-                <img
-                  class="slider__image"
-                  src="./assets/images/mexico.webp"
-                  alt="Paisaje urbano nocturno de Asia con rascacielos iluminados"
-                  loading="lazy"
-                  decoding="async"
-                  width="1920"
-                  height="1080"
-                />
-              </picture>
-            </figure>
-          </div>
         </div>
+      </div>
+    </section>
+  </main>
+  </main>
 
-        <!-- Paginación -->
-        <div class="slider__pagination" role="tablist">
-          <button
-            id="dotOne"
-            class="slider__dot slider__dot--active"
-            role="tab"
-            aria-selected="true"
-            aria-controls="slide1"
-          ></button>
-          <button
-            id="dotTwo"
-            class="slider__dot"
-            role="tab"
-            aria-selected="false"
-            aria-controls="slide2"
-          ></button>
-          <button
-            id="dotThree"
-            class="slider__dot"
-            role="tab"
-            aria-selected="false"
-            aria-controls="slide3"
-          ></button>
-        </div>
-      </section>
 
-      <!-- Section Live your own adventures -->
-      <section class="live">
-        <div class="live__box">
-          <h2 class="live__title">Vive tus propias aventuras</h2>
-          <h4 class="live__subtitle">
-            Para los que les gusta explorar y conocer mundo sin complejos
-          </h4>
-        </div>
-      </section>
+  <script src="scripts/sriptManager.js" type="module"></script>
+</body>
 
-      <!-- Filter button -->
-      <section class="filter">
-        <button id="btnFilters" class="filter__button">
-          <span
-            ><svg
-              width="20"
-              height="14"
-              viewBox="0 0 20 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.33301 1H18.6663"
-                stroke="#2F222F"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M4.66602 7H15.3327"
-                stroke="#2F222F"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M8 13H12"
-                stroke="#2F222F"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg> </span
-          >Ver Filtros
-        </button>
-      </section>
-    </main>
-
-    <script src="scripts/sriptManager.js" type="module"></script>
-  </body>
 </html>
