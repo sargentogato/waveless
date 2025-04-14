@@ -489,6 +489,12 @@
       width: 150px;
     }
   }
+  
+.cards__card-price {
+  line-height: 16px;
+  color: var(--greyDark);
+  order: 0;
+}
 }
 
 @media screen and (min-width:700px) {
